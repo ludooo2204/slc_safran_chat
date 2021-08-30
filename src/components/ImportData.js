@@ -26,7 +26,7 @@ const ImportData = () => {
 	const post = (_data) => {
 
 		axios
-			.post("http://localhost/API_test/post.php", _data)
+			.post("https://localhost/API_test/post.php", _data)
 			.then((response) => {
 				console.log(response);
 				window.location.reload();

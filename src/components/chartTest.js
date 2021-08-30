@@ -22,8 +22,8 @@ export class LineChartEcart extends React.Component {
 		// 	this.myChart.options.scales.yAxes[0].ticks.max = 70;
 		// }
 		// if (this.props.data.domaine == "TEMPERATURE") {
-			this.myChart.options.scales.yAxes[0].ticks.min = 0;
-			this.myChart.options.scales.yAxes[0].ticks.max = 10.6;
+			// this.myChart.options.scales.yAxes[0].ticks.min = 0;
+			// this.myChart.options.scales.yAxes[0].ticks.max = 10.6;
 		// }
 		// this.myChart.data.labels = this.props.data.appareil;
 		// this.myChart.data.datasets[0].data = this.props.data.ecart;
@@ -93,6 +93,8 @@ fetch('http://localhost/API_test/get.php')
 .catch(error=>console.error(error))
 
 const traitementReponseApi=(_reponse)=>{
+	console.log('_reponse');
+	console.log(_reponse);
 	_reponse.forEach(etalonnage => {
 		console.log(etalonnage)
 		console.log(new Date(etalonnage.dateEtalonnage).toLocaleDateString('Fr-fr'))
